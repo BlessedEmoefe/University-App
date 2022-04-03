@@ -22,7 +22,7 @@ const Home = ({navigation}) => {
   return (
     <SafeArea>
       <PageContainer paddingHorizontal>
-        <Header text="Dashboard" />
+        <Header text="Dashboard" logout="Logout"/>
         <Spacer size="large" position="top" />
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <Spacer size="large" position="top" />

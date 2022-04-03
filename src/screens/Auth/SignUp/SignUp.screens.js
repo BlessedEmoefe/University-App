@@ -45,29 +45,23 @@ export const SignUp = ({navigation}) => {
         </AuthHeader>
         <InputContainer>
           <TextInputContainer
-            label="Username/Email"
+            label="Username"
             value={username}
             onChangeText={setUsername}
             leftIcon="account-outline"
             icon
             wrapInContainer={true}
           />
+          <Spacer size="large" position="top" />
           <TextInputContainer
-            label="Username/Email"
+            label="Email"
             value={username}
             onChangeText={setUsername}
             leftIcon="account-outline"
             icon
             wrapInContainer={true}
           />
-          <TextInputContainer
-            label="Username/Email"
-            value={username}
-            onChangeText={setUsername}
-            leftIcon="account-outline"
-            icon
-            wrapInContainer={true}
-          />
+        
           <Spacer size="large" position="top" />
           <TextInputContainer
             style={{color: colors.iconColor}}
@@ -82,28 +76,28 @@ export const SignUp = ({navigation}) => {
 
         <ButtonContainer>
           <Button
-            btnText="SignIn"
+            btnText="SignUp"
             btnAction={() => {
               navigation.navigate('Home');
             }}
           />
         </ButtonContainer>
         <NewMemberRegister>
-          <StyledText variant="hint">New Member?</StyledText>
+          <StyledText variant="hint">Already a Member?</StyledText>
           <Spacer size="small" position="left" />
           <StyledText
             variant="link"
-            onPress={() => navigation.navigate('SignUp')}>
-            SignUp
+            onPress={() => navigation.navigate('SignIn')}>
+            SignIn
           </StyledText>
         </NewMemberRegister>
-        <ForgetPasswordContainer>
+        {/* <ForgetPasswordContainer>
           <StyledText
             variant="link"
             onPress={() => navigation.navigate('ForgotPassword')}>
             Forgot Password?
           </StyledText>
-        </ForgetPasswordContainer>
+        </ForgetPasswordContainer> */}
       </InnerContainer>
     </SafeArea>
   );

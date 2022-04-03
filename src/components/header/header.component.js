@@ -6,12 +6,11 @@ import {
   LeftSide,
   MenuIconWrapper,
   HeaderText,
-  UserImage,
   RightSide,
 } from './header.styles';
 import {Arrow, Menu} from '../../assets/Icons';
 
-export const Header = ({svg, text, source, paddingHorizontal, position}) => {
+export const Header = ({svg, text, logout, paddingHorizontal, position}) => {
   const navigation = useNavigation();
   return (
     <HeaderCover
@@ -21,7 +20,7 @@ export const Header = ({svg, text, source, paddingHorizontal, position}) => {
       <LeftSide flexDirection="row" width="auto" justifyContent="flex-start">
         {svg == 'menu' ? (
           <MenuIconWrapper onPress={() => navigation.toggleDrawer()}>
-            <Menu onPress={() => { }} />
+            <Menu onPress={() => {}} />
           </MenuIconWrapper>
         ) : svg == 'previous' ? (
           <MenuIconWrapper onPress={() => navigation.goBack()}>
@@ -31,13 +30,14 @@ export const Header = ({svg, text, source, paddingHorizontal, position}) => {
         {svg && <Spacer size="medium" position="right" />}
         {text ? <HeaderText variant="smallTitle">{text}</HeaderText> : null}
       </LeftSide>
-      {source ? (
-        <RightSide
-          onTouchStart={() => {
-            navigation.navigate('CourierProfile');
-          }}>
-          <UserImage source={source} />
-        </RightSide>
+      {logout ? (
+        <HeaderText
+          onPress={() => {
+            navigation.navigate('SignIn');
+          }}
+          variant="smallTitle">
+          {logout}
+        </HeaderText>
       ) : null}
     </HeaderCover>
   );
