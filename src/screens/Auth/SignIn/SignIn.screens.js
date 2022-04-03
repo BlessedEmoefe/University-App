@@ -7,9 +7,8 @@ import Logo from '../../../assets/Australia.jpg';
 
 import {SafeArea} from '../../../components/utility/safe-area.component';
 import {Text as StyledText} from '../../../components/typography/text.component';
-import {RoundedButton} from '../../../components/button/button.component';
+import {Button} from '../../../components/button/button.component';
 import {Spacer} from '../../../components/spacer/spacer.component';
-import {Loader} from '../../../components/loader/loader.component';
 import TextInputContainer from '../../../components/textInputContainer/TextInput';
 import {
   InnerContainer,
@@ -64,24 +63,11 @@ export const SignIn = ({navigation}) => {
           />
         </InputContainer>
         <Spacer size="large" position="top" />
-        <Spacer size="large" position="top" />
-        
-        <ButtonContainer>
-          {/* <RoundedButton
-              mode="contained"
-              variant="wide"
-              contentStyle={{height: '100%'}}
-              labelStyle={{fontSize: 18, fontWeight: 'bold'}}
-              onPress={() => {
-                console.log('Signing in');
-                //call the signIn method to set items in the token
-                handleSignIn();
 
-                //navigation.navigate("SignUp");
-              }}
-              uppercase={false}>
-              Sign In
-            </RoundedButton> */}
+        <ButtonContainer>
+          <Button btnText="SignIn" btnAction={()=>{
+            navigation.navigate('Home');
+          }} />
         </ButtonContainer>
         <NewMemberRegister>
           <StyledText variant="hint">New Member?</StyledText>

@@ -65,7 +65,7 @@ const h4 = theme => `
 
   font-size: ${theme.fontSizes.h4};
   font-weight: ${theme.fontWeights.bold};
-  color: ${theme.colors.blue.strong};
+  color: ${theme.colors.primary};
 `;
 const h5 = theme => `
 
