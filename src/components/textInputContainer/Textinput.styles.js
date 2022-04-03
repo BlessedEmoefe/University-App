@@ -2,7 +2,6 @@ import styled from 'styled-components/native';
 import {colors} from '../../infrastructure/theme/colors';
 import {TextInput} from 'react-native-paper';
 
-
 export const TextInputStyled = styled.View`
   width: 100%;
   height: 50;

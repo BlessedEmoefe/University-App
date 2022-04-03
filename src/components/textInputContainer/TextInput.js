@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {theme} from '../../infrastructure/theme';
+import { colors } from '../../infrastructure/theme/colors';
 import {
   TextInputContainerWrap,
   TextInputStyled,
@@ -10,9 +11,10 @@ const TextInputContainer = ({
   borderColor,
   elevation,
   searchStores,
-  placeholder = 'Search stores by name',
+  label,
+  secureTextEntry,
 }) => {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState('');
 
   // update value with values typed into the search bar component
   const searchHandler = searchValue => {
@@ -21,17 +23,21 @@ const TextInputContainer = ({
   };
 
   return (
-      <TextInputStyled borderColor={borderColor} elevation={elevation}>
-        <StyledTextInput
-          value={value}
-          placeholderTextColor={theme.colors.black.light}
-      
-          onChangeText={value => searchHandler(value)}
-          autoFocus
-          name="text"
-          placeholder={placeholder}
-        />
-      </TextInputStyled>
+    <TextInputStyled borderColor={borderColor} elevation={elevation}>
+      <StyledTextInput
+        value={value}
+        mode="outlined"
+        label={label}
+        outlineColor={colors.primary}
+        activeOutlineColor={colors.primary}
+        placeholderTextColor={theme.colors.black.light}
+        onChangeText={value => setValue(value)}
+        secureTextEntry={secureTextEntry}
+        autoFocus
+        name="text"
+        // dense
+      />
+    </TextInputStyled>
   );
 };
 

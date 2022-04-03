@@ -12,22 +12,16 @@ import {Spacer} from '../../../components/spacer/spacer.component';
 import {Loader} from '../../../components/loader/loader.component';
 import TextInputContainer from '../../../components/textInputContainer/TextInput';
 import {
-  TopLeftImage,
-  Icon,
-  LogoContainer,
-  AuthHeader,
   InnerContainer,
+  AuthHeader,
   InputContainer,
   ButtonContainer,
-  InnerTextContainer,
   ForgetPasswordContainer,
   NewMemberRegister,
+  InnerTextContainer,
   ContinueSignUp,
   SignUpContainer,
   StyledTextInput,
-  HorizontalLine,
-  SocialMedia,
-  SocialIcons,
 } from './SignIn.styles';
 
 import {colors} from '../../../infrastructure/theme/colors';
@@ -50,7 +44,6 @@ export const SignIn = ({navigation}) => {
             Sign in to continue
           </StyledText>
         </AuthHeader>
-
         <InputContainer>
           <TextInputContainer
             label="Username/Email"
@@ -66,25 +59,15 @@ export const SignIn = ({navigation}) => {
             label="Password"
             value={password}
             onChangeText={setPassword}
-            rightIcon="eye-outline"
-            //rightIconOnPress={() => setRevealPassword()}
-            leftIcon="lock-outline"
+            secureTextEntry={true}
             wrapInContainer={true}
-            secureTextEntry={revealPassword}
           />
         </InputContainer>
-
-        {/* <ForgetPasswordContainer>
-          <StyledText
-            variant="link"
-            onPress={() => navigation.navigate('ForgotPassword')}>
-            Forgot Password?
-          </StyledText>
-        </ForgetPasswordContainer> */}
-
-        {/* <ButtonContainer>
+        <Spacer size="large" position="top" />
+        <Spacer size="large" position="top" />
         
-            <RoundedButton
+        <ButtonContainer>
+          {/* <RoundedButton
               mode="contained"
               variant="wide"
               contentStyle={{height: '100%'}}
@@ -98,11 +81,9 @@ export const SignIn = ({navigation}) => {
               }}
               uppercase={false}>
               Sign In
-            </RoundedButton>
-          )}
-        </ButtonContainer> */}
-
-        {/* <NewMemberRegister>
+            </RoundedButton> */}
+        </ButtonContainer>
+        <NewMemberRegister>
           <StyledText variant="hint">New Member?</StyledText>
           <Spacer size="small" position="left" />
           <StyledText
@@ -110,28 +91,14 @@ export const SignIn = ({navigation}) => {
             onPress={() => navigation.navigate('SignUp')}>
             Register
           </StyledText>
-        </NewMemberRegister> */}
-        <Spacer size="large" p />
-
-        {/* <ContinueSignUp>
-          <StyledText variant="hint">Or</StyledText>
-          <SignUpContainer>
-            <HorizontalLine />
-            <Spacer size="large" position="left" />
-            <StyledText variant="hint">Sign in with</StyledText>
-            <Spacer size="large" position="right" />
-            <HorizontalLine />
-          </SignUpContainer>
-        </ContinueSignUp> */}
-        <Spacer size="large" position="top" />
-        {/* <SocialMedia>
-          <SocialIcons>
-            <Facebook name="sc-facebook" size={40} color={colors.blue.strong} />
-          </SocialIcons>
-          <SocialIcons>
-            <Icon source={Google} />
-          </SocialIcons>
-        </SocialMedia> */}
+        </NewMemberRegister>
+        <ForgetPasswordContainer>
+          <StyledText
+            variant="link"
+            onPress={() => navigation.navigate('ForgotPassword')}>
+            Forgot Password?
+          </StyledText>
+        </ForgetPasswordContainer>
       </InnerContainer>
     </SafeArea>
   );
