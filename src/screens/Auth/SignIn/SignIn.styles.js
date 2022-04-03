@@ -41,15 +41,3 @@ export const ForgetPasswordContainer = styled.View`
   margin-top: -20px;
 `;
 
-
-
-
-
-export const InnerTextContainer = styled.View`
-  flex: 0.8;
-`;
-
-export const StyledTextInput = styled(TextInput)`
-  height: 50px;
-  width: 95%;
-`;

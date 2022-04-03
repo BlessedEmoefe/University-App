@@ -75,16 +75,16 @@ export const SignIn = ({navigation}) => {
           <StyledText
             variant="link"
             onPress={() => navigation.navigate('SignUp')}>
-            Register
+            SignUp
           </StyledText>
         </NewMemberRegister>
-        <ForgetPasswordContainer>
+        {/* <ForgetPasswordContainer>
           <StyledText
             variant="link"
             onPress={() => navigation.navigate('ForgotPassword')}>
             Forgot Password?
           </StyledText>
-        </ForgetPasswordContainer>
+        </ForgetPasswordContainer> */}
       </InnerContainer>
     </SafeArea>
   );
