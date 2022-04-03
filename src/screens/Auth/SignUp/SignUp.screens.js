@@ -55,8 +55,8 @@ export const SignUp = ({navigation}) => {
           <Spacer size="large" position="top" />
           <TextInputContainer
             label="Email"
-            value={username}
-            onChangeText={setUsername}
+            value={email}
+            onChangeText={setEmail}
             leftIcon="account-outline"
             icon
             wrapInContainer={true}
