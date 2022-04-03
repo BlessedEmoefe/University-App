@@ -3,11 +3,16 @@ import {colors} from '../../../infrastructure/theme/colors';
 import {TextInput} from 'react-native-paper';
 
 export const InnerContainer = styled.ScrollView`
-  flex: 1;
+ flex: 1;
   width: 100%; 
-  background-color:red;
+  paddingHorizontal:15;
+  paddingTop:10%;
 `;
-
+export const InputContainer = styled.View`
+  width: 100%;
+  height: auto;
+  align-items: center;
+`;
 export const Icon = styled.Image`
   width: 30px;
   height: 30px;

@@ -20,27 +20,18 @@ const TextInputContainer = ({
     searchStores(searchValue);
   };
 
-  const styledInput = {
-    fontSize: 18,
-    color: theme.colors.black.strong,
-    width: '70%',
-    height: '100%',
-  };
-
   return (
-    <TextInputContainerWrap>
       <TextInputStyled borderColor={borderColor} elevation={elevation}>
         <StyledTextInput
           value={value}
           placeholderTextColor={theme.colors.black.light}
-          style={styledInput}
+      
           onChangeText={value => searchHandler(value)}
           autoFocus
           name="text"
           placeholder={placeholder}
         />
       </TextInputStyled>
-    </TextInputContainerWrap>
   );
 };
 

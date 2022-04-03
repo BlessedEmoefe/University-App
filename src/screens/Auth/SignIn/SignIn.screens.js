@@ -10,13 +10,14 @@ import {Text as StyledText} from '../../../components/typography/text.component'
 import {RoundedButton} from '../../../components/button/button.component';
 import {Spacer} from '../../../components/spacer/spacer.component';
 import {Loader} from '../../../components/loader/loader.component';
-import TextInputContainer from "../../../components/textInputContainer/TextInput"
+import TextInputContainer from '../../../components/textInputContainer/TextInput';
 import {
   TopLeftImage,
   Icon,
   LogoContainer,
   AuthHeader,
   InnerContainer,
+  InputContainer,
   ButtonContainer,
   InnerTextContainer,
   ForgetPasswordContainer,
@@ -44,22 +45,23 @@ export const SignIn = ({navigation}) => {
           <StyledText variant="h4">Welcome,</StyledText>
           <StyledText
             variant="smallTitle"
-            // style={{color: colors.headerShade.regular}}
-          >
+            style={{color: colors.headerShade.regular}}
+            fgfgg>
             Sign in to continue
           </StyledText>
         </AuthHeader>
 
-        <View>
+        <InputContainer>
           <TextInputContainer
-          label="Username/Email"
-          value={username}
-          onChangeText={setUsername}
-          leftIcon="account-outline"
-          icon
-          wrapInContainer={true}
+            label="Username/Email"
+            value={username}
+            onChangeText={setUsername}
+            leftIcon="account-outline"
+            icon
+            wrapInContainer={true}
           />
-          {/* <TextInputContainer
+          <Spacer size="large" position="top" />
+          <TextInputContainer
             style={{color: colors.iconColor}}
             label="Password"
             value={password}
@@ -68,10 +70,9 @@ export const SignIn = ({navigation}) => {
             //rightIconOnPress={() => setRevealPassword()}
             leftIcon="lock-outline"
             wrapInContainer={true}
-            disabled={loading}
             secureTextEntry={revealPassword}
-          /> */}
-        </View>
+          />
+        </InputContainer>
 
         {/* <ForgetPasswordContainer>
           <StyledText
