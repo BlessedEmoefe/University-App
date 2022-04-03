@@ -23,12 +23,13 @@ const CountryUniversities = ({route, navigation}) => {
   );
   // console.log(carMake);
   if (loading) return <Loader />;
-  if (error)
+  if (error) {
     return (
       <View>
         <Text>Error</Text>
       </View>
     );
+  }
   // const {results} = data;
   // console.log(results);
   return (

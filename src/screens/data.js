@@ -29,9 +29,6 @@ import Tunisia from  "../assets/tunisia.jpg";
 import Ukraine from  "../assets/ukraine.jpg";
 import Panama from  "../assets/panama.jpg";
 import Belgium from  "../assets/belgium.jpg";
-// import  from  "../assets/";
-// import  from  "../assets/";
-// import  from  "../assets/";
 
 export const CountriesList = [
   {country: 'Nigeria', image: Nigeria},
